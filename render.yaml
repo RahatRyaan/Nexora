@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: nexora-agentic-erp
+    runtime: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm run start --workspace=@nexora/api
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: AI_PROVIDER
+        value: omniroute
+      - key: OMNIROUTE_API_KEY
+        sync: false
+      - key: OMNIROUTE_BASE_URL
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: MOCK_ERP_ENABLED
+        value: "true"

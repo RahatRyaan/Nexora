@@ -1,0 +1,116 @@
+export enum AgentType {
+  ORCHESTRATOR = 'ORCHESTRATOR',
+  SUPPORT_POD = 'SUPPORT_POD',
+  SALES_POD = 'SALES_POD',
+  FINANCE_POD = 'FINANCE_POD',
+  TRUST_GUARD = 'TRUST_GUARD',
+  BROADCAST = 'BROADCAST'
+}
+
+export enum UserRole {
+  ADMIN = 'ADMIN',
+  MANAGER = 'MANAGER',
+  FINANCE_LEAD = 'FINANCE_LEAD',
+  SUPPORT_AGENT = 'SUPPORT_AGENT',
+  REV_OPS = 'REV_OPS',
+  VIEWER = 'VIEWER'
+}
+
+export enum AccountTier {
+  ENTERPRISE = 'ENTERPRISE',
+  MID_MARKET = 'MID_MARKET',
+  SMB = 'SMB'
+}
+
+export enum DealStage {
+  PROSPECTING = 'PROSPECTING',
+  QUALIFIED = 'QUALIFIED',
+  PROPOSAL = 'PROPOSAL',
+  NEGOTIATION = 'NEGOTIATION',
+  CLOSED_WON = 'CLOSED_WON',
+  CLOSED_LOST = 'CLOSED_LOST'
+}
+
+export enum TicketChannel {
+  CHAT = 'CHAT',
+  EMAIL = 'EMAIL',
+  PORTAL = 'PORTAL'
+}
+
+export enum TicketCategory {
+  BILLING = 'BILLING',
+  ORDER_STATUS = 'ORDER_STATUS',
+  TECHNICAL = 'TECHNICAL',
+  PLAN_CHANGE = 'PLAN_CHANGE',
+  REFUND_REQUEST = 'REFUND_REQUEST',
+  OTHER = 'OTHER'
+}
+
+export enum TicketSeverity {
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  CRITICAL = 'CRITICAL'
+}
+
+export enum TicketStatus {
+  NEW = 'NEW',
+  IN_PROGRESS = 'IN_PROGRESS',
+  PENDING_APPROVAL = 'PENDING_APPROVAL',
+  RESOLVED = 'RESOLVED',
+  ESCALATED = 'ESCALATED'
+}
+
+export enum InvoiceStatus {
+  DRAFT = 'DRAFT',
+  POSTED = 'POSTED',
+  PAID = 'PAID',
+  DISPUTED = 'DISPUTED',
+  CANCELLED = 'CANCELLED'
+}
+
+export enum InvoiceMatchStatus {
+  THREE_WAY_MATCHED = '3_WAY_MATCHED',
+  MISMATCH_PO = 'MISMATCH_PO',
+  MISMATCH_RECEIPT = 'MISMATCH_RECEIPT',
+  PENDING_DOCUMENTATION = 'PENDING_DOCUMENTATION'
+}
+
+export enum TransactionType {
+  PAYMENT = 'PAYMENT',
+  REFUND = 'REFUND',
+  CREDIT_MEMO = 'CREDIT_MEMO',
+  ADJUSTMENT = 'ADJUSTMENT'
+}
+
+export enum ActionRiskLevel {
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  CRITICAL = 'CRITICAL'
+}
+
+export enum ActionStatus {
+  PENDING_APPROVAL = 'PENDING_APPROVAL',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
+  EXECUTED = 'EXECUTED',
+  FAILED = 'FAILED',
+  ROLLED_BACK = 'ROLLED_BACK'
+}
+
+export enum ErpProvider {
+  ODOO = 'odoo',
+  MOCK = 'mock',
+  NETSUITE = 'netsuite',
+  ZOHO = 'zoho',
+  DYNAMICS = 'dynamics',
+  GENERIC_REST = 'generic_rest'
+}
+
+export const DEFAULT_THRESHOLDS = {
+  SUPPORT_CONFIDENCE_THRESHOLD: 0.85,
+  SUPPORT_MAX_AUTO_REFUND_DOLLARS: 100,
+  SALES_AUTO_OUTREACH_THRESHOLD: 0.90,
+  FINANCE_STRICT_HUMAN_APPROVAL: true
+} as const;
